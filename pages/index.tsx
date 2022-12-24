@@ -10,14 +10,14 @@ const IndexPage = () => {
       <PageIntro />
       <section className="featured">
         <div className="container">
-          <article style={{backgroundImage: 'url(/images/2112.jpg)'}} className="featured-item featured-item-large">
+          <article style={{backgroundImage: 'url(/images/products/product-1.jpg)'}} className="featured-item featured-item-large">
             <div className="featured-item__content">
               <h3>New trainings sessions are now in!</h3>
               <a href="#" className="btn btn--rounded">Show Sessions</a>
             </div>
           </article>
           
-          <article style={{backgroundImage: 'url(/images/1212.jpg)'}} className="featured-item featured-item-small-first">
+          <article style={{backgroundImage: 'url(/images/products/product-2.jpg)'}} className="featured-item featured-item-small-first">
             <div className="featured-item__content">
               <h3>Flutter session</h3>
               <a href="#" className="btn btn--rounded">More details
@@ -25,7 +25,7 @@ const IndexPage = () => {
             </div>
           </article>
           
-          <article style={{backgroundImage: 'url(/images/4344.jpg)'}} className="featured-item featured-item-small">
+          <article style={{backgroundImage: 'url(/images/products/product-5.jpg)'}} className="featured-item featured-item-small">
             <div className="featured-item__content">
               <h3>
 Data Analytics session</h3>
