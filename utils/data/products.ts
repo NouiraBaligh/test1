@@ -234,7 +234,7 @@ export const products = [
   },
   {
     id: '5',
-    name: 'Analyze data in Excel, google Sheets or Access',
+    name: 'Analyze data in Excel, google Sheets or Accesssss',
     price: 119.99,
    
     category: 'T-shirt',

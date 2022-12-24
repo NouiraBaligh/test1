@@ -1,12 +1,9 @@
 import { useState } from 'react';
 import Checkbox from './form-builder/checkbox';
-import CheckboxColor from './form-builder/checkbox-color';
 import Slider from 'rc-slider';
 
 // data
 import productsTypes from './../../utils/data/products-types';
-import productsColors from './../../utils/data/products-colors';
-import productsSizes from './../../utils/data/products-sizes';
 
 const { createSliderWithTooltip } = Slider;
 const Range = createSliderWithTooltip(Slider.Range);
@@ -28,7 +25,8 @@ const ProductsFilter = () => {
       
       <div className={`products-filter__wrapper ${filtersOpen ? 'products-filter__wrapper--open' : ''}`}>
         <div className="products-filter__block">
-          <button type="button">Product type</button>
+          <button type="button">Session type
+</button>
           <div className="products-filter__block__content">
             {productsTypes.map(type => (
               <Checkbox 
@@ -41,12 +39,12 @@ const ProductsFilter = () => {
         </div>
 
         <div className="products-filter__block">
-          <button type="button">Price</button>
+          <button type="button">Price</button> 
           <div className="products-filter__block__content">
-            <Range min={0} max={20} defaultValue={[3, 10]} tipFormatter={value => `${value}%`} />
+            <Range min={0} max={330.99} defaultValue={[3, 10]} tipFormatter={(value: any) => `${value}%`} />
           </div>
         </div>
-        
+{/*         
         <div className="products-filter__block">
           <button type="button">Size</button>
           <div className="products-filter__block__content checkbox-square-wrapper">
@@ -69,7 +67,7 @@ const ProductsFilter = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         <button type="submit" className="btn btn-submit btn--rounded btn--yellow">Apply</button>
       </div>

@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import productsColors from './../../../utils/data/products-colors';
-import productsSizes from './../../../utils/data/products-sizes';
-import CheckboxColor from './../../products-filter/form-builder/checkbox-color';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { some } from 'lodash';
 import { addProduct } from 'store/reducers/cart';
@@ -16,12 +14,10 @@ type ProductContent = {
 const Content = ({ product }: ProductContent) => {
   const dispatch = useDispatch();
   const [count, setCount] = useState<number>(1);
-  const [color, setColor] = useState<string>('');
-  const [itemSize, setItemSize] = useState<string>('');
+  const [color] = useState<string>('');
+  const [itemSize] = useState<string>('');
 
-  const onColorSet = (e: string) => setColor(e);
-  const onSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => setItemSize(e.target.value);
-
+ 
   const { favProducts } = useSelector((state: RootState) => state.user);
   const isFavourite = some(favProducts, productId => productId === product.id);
 
@@ -68,7 +64,7 @@ const Content = ({ product }: ProductContent) => {
       </div>
 
       <div className="product-content__filters">
-        <div className="product-filter-item">
+        {/* <div className="product-filter-item">
           <h5>Color:</h5>
           <div className="checkbox-color-wrapper">
             {productsColors.map(type => (
@@ -82,8 +78,8 @@ const Content = ({ product }: ProductContent) => {
               />
             ))}
           </div>
-        </div>
-        <div className="product-filter-item">
+        </div> */}
+        {/* <div className="product-filter-item">
           <h5>Size: <strong>See size table</strong></h5>
           <div className="checkbox-color-wrapper">
             <div className="select-wrapper">
@@ -95,7 +91,7 @@ const Content = ({ product }: ProductContent) => {
               </select>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="product-filter-item">
           <h5>Quantity:</h5>
           <div className="quantity-buttons">
